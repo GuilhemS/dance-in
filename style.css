@@ -2,7 +2,7 @@
 
 body{
 	width:100%;
-	background-color:#e6e6ff;
+	background-color:white;
 	text-align:center;
 }
 
@@ -39,6 +39,42 @@ a:hover{
 	color : #ff80ff;
 }
 
+.navbar, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	 overflow: hidden;
+	 background: #333;
+	 position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar, li {
+	float: left;
+}
+
+.navbar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navbar li a:hover {
+	background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+
+.dropdown_menu {
+	display: none;
+}
+
 #menu1{
 	width:70%;
 	display:table;
@@ -46,11 +82,4 @@ a:hover{
 
 #menu1 li{
 	display:table-cell;
-}
-
-#menu2{
-	width:70%;
-}
-
-#menu2 span{
 }
