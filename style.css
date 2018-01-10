@@ -1,0 +1,56 @@
+/* FICHIER CSS */
+
+body{
+	width:100%;
+	background-color:#e6e6ff;
+	text-align:center;
+}
+
+h1{
+	font-size:16px;
+	font-family: Arial;
+	width: 100%;
+	text-align: center;
+}
+
+h2{
+	font-size:14px;
+	font-style:italic;
+	font-family: Arial;
+}
+
+div span p{
+	font-size:12px;
+	font-family: Arial;
+}
+
+address{
+	font-size:12px;
+	font-style:italic;
+	font-family: Arial;
+}
+
+a{
+	text-decoration : none;
+	color : #4d4dff;
+}
+a:hover{
+	text-decoration : none;
+	color : #ff80ff;
+}
+
+#menu1{
+	width:70%;
+	display:table;
+}
+
+#menu1 li{
+	display:table-cell;
+}
+
+#menu2{
+	width:70%;
+}
+
+#menu2 span{
+}
