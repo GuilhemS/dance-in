@@ -3,7 +3,6 @@
 body{
 	width:100%;
 	color:black;
-	background-color:white;
 	background-image:url(images/background.jpg);
 	background-repeat:no-repeat;
 	background-position: top;
@@ -52,6 +51,7 @@ a:hover{
 	 background: #333;
 	 position: fixed;
     top: 0;
+	 left: 0;
     width: 100%;
 }
 
@@ -78,6 +78,23 @@ a:hover{
 
 .dropdown_menu {
 	display: none;
+}
+
+.footer
+{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 45px;
+    margin: 0px;
+    opacity: 0.9;
+	 padding: 5px;
+    background-color: #333;
+}
+
+.footer span {
+	color: white;
 }
 
 #menu1{

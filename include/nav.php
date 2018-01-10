@@ -1,6 +1,6 @@
 <nav>
    <ul class="navbar">
-      <li>
+      <li class="active">
          <a href="index.php">Accueil</a>
       </li>
       <li>
@@ -13,6 +13,9 @@
       </li>
       <li>
          <a href="evenements.php">Evenements</a>
+      </li>
+      <li>
+         <a href="equipe.php">Equipe</a>
       </li>
       <li>
          <a href="#footer">Contact</a>
