@@ -2,7 +2,10 @@
 
 body{
 	width:100%;
+	color:black;
 	background-color:white;
+	background-image:url(images/background.jpg);
+	background-repeat:no-repeat;
 	text-align:center;
 }
 
