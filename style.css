@@ -3,7 +3,7 @@
 body{
 	width:100%;
 	color:black;
-	background-image:url(images/background.jpg);
+	background-image:url(Vue/images/background.jpg);
 	background-repeat:no-repeat;
 	background-position: top;
 	margin:0;
