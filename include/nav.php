@@ -3,13 +3,13 @@
       <li class="active">
          <a href="index.php">Accueil</a>
       </li>
-      <li>
-         <a href="photo.php">Galerie</a>
-         <ul class="dropdown_menu">
-            <li><a href="photo.php">Photo</a></li>
-            <li><a href="video.php">Video</a></li>
-            <li><a href="audio.php">Audio</a></li>
-         </ul>
+      <li class="dropdown">
+         <a href="photo.php" class="dropbtn">Galerie</a>
+         <div class="dropdown_menu">
+            <a href="photo.php">Photo</a>
+            <a href="video.php">Video</a>
+            <a href="audio.php">Audio</a>
+         </div>
       </li>
       <li>
          <a href="evenements.php">Evenements</a>
