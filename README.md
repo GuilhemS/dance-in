@@ -4,6 +4,6 @@ source image background : http://www.adcm-danse.fr/
 
 # TO-DO list
 - Logo
-- dropdown_menu
 - construction base
 - galerie photo -> fichier xml
+- Faire maquette du site, au moins page d'accueil (-> Alice)

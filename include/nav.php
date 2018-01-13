@@ -20,5 +20,8 @@
       <li>
          <a href="#footer">Contact</a>
       </li>
+      <li>
+         <a href="admin.php" class="admin">Admin</a>
+      </li>
    </ul>
 </nav>
