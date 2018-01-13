@@ -8,10 +8,9 @@
 		<meta name="author" content="Alice DEVESA, Guilhem SABATHIER"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script language="JavaScript" type="text/javascript" src="/dropdown.js"></SCRIPT>
 	</head>
 
-	<body onload="dropdown()">
+	<body>
 		<?php include('include/nav.php'); ?>
 
 		<?php include('include/footer.php'); ?>

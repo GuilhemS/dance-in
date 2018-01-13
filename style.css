@@ -34,45 +34,32 @@ address{
 	font-family: Arial;
 }
 
-a{
-	text-decoration : none;
-	color : #4d4dff;
-}
-a:hover{
-	text-decoration : none;
-	color : #ff80ff;
-}
-
-.navbar {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-	 overflow: hidden;
-	 background: #333;
-	 position: fixed;
-    top: 0;
-	 left: 0;
-    width: 100%;
+    overflow: hidden;
+    background-color: #333;
 }
 
-.navbar li {
-	float: left;
+li {
+    float: left;
 }
 
-.navbar li a, .dropbtn{
-	display: inline-block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.navbar li a:hover, .dropdown:hover .dropbtn {
-	background-color: #111;
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #111;
 }
 
 li.dropdown {
-	display: inline-block;
+    display: inline-block;
 }
 
 .dropdown_menu {
@@ -92,16 +79,10 @@ li.dropdown {
     text-align: left;
 }
 
-.dropdown_menu a:hover {
-	background-color: #f1f1f1
-}
+.dropdown_menu a:hover {background-color: #f1f1f1}
 
 .dropdown:hover .dropdown_menu {
     display: block;
-}
-
-.active {
-	background-color: #4CAF50;
 }
 
 .footer
