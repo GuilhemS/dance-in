@@ -46,12 +46,17 @@ li {
     float: left;
 }
 
+#logo {
+		margin-right: 20px;
+}
+
 li a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+		font-size: 28px;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
