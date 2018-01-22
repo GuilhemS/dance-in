@@ -11,7 +11,21 @@
 	</head>
 
 	<body>
-		<?php include('include/nav.php'); ?>
+		<?php include('include/nav.php');
+
+		$bdd = new PDO('mysql:host=localhost;dbname=dance-in;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+		$reponse = $bdd->query('SELECT * FROM article WHERE titreArticle = "Acceuil";');
+
+		while ($donnees = $reponse->fetch()){
+		?>
+
+		<p>  <?= $donnees['contenu']; ?> </p>
+
+		<?php
+		}
+		$reponse->closeCursor(); // Termine le traitement de la requête
+		?>
 
 		<?php include('include/footer.php'); ?>
 	</body>
