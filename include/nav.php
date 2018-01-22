@@ -5,11 +5,6 @@
       </li>
       <li class="dropdown">
          <a href="photo.php" class="dropbtn">Galerie</a>
-         <div class="dropdown_menu">
-            <a href="photo.php">Photo</a>
-            <a href="video.php">Video</a>
-            <a href="audio.php">Audio</a>
-         </div>
       </li>
       <li>
          <a href="evenements.php">Evenements</a>
