@@ -12,51 +12,52 @@
 
 	<body>
 		<?php include('include/nav.php'); ?>
+		<script type="text/javascript" src="slideshow.js">
 
-      <div class="image-slider">
-         <div class="mySlide">
-            <div class="numbertext">1 / 8</div>
-            <img src="/images/slides/image1.jpg" style="width:100%">
-         </div>
+		</script>
+		<div class="photo">
+	      <div class="image-slider">
+	         <div class="mySlide">
+	            <img src="images/slides/imagedanse1.jpg" style="width:100%; margin-bottom:-6px">
+	         </div>
 
-         <div class="mySlide">
-            <div class="numbertext">2 / 8</div>
-            <img src="/images/slides/image2.jpg" style="width:100%">
-         </div>
+	         <div class="mySlide">
+	            <img src="images/slides/imagedanse2.jpg" style="width:100%">
+	         </div>
 
-         <div class="mySlide">
-            <div class="numbertext">3 / 8</div>
-            <img src="/images/slides/image3.jpg" style="width:100%">
-         </div>
+	         <div class="mySlide">
+	            <img src="images/slides/imagedanse3.jpg" style="width:100%">
+	         </div>
 
-         <div class="mySlide">
-            <div class="numbertext">4 / 8</div>
-            <img src="/images/slides/image4.jpg" style="width:100%">
-         </div>
+	         <div class="mySlide">
+	            <img src="images/slides/imagedanse4.jpg" style="width:100%">
+	         </div>
 
-         <div class="mySlide">
-            <div class="numbertext">5 / 8</div>
-            <img src="/images/slides/image5.jpg" style="width:100%">
-         </div>
+	         <!-- Boutons suivant et précédent -->
+	         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-         <div class="mySlide">
-            <div class="numbertext">6 / 8</div>
-            <img src="/images/slides/image6.jpg" style="width:100%">
-         </div>
+	         <!-- Text de l'image -->
+	         <div class="caption-container">
+	            <p id="caption"></p>
+	         </div>
 
-         <div class="mySlide">
-            <div class="numbertext">7 / 8</div>
-            <img src="/images/slides/image7.jpg" style="width:100%">
-         </div>
-
-         <div class="mySlide">
-            <div class="numbertext">8 / 8</div>
-            <img src="/images/slides/image8.jpg" style="width:100%">
-         </div>
-
-         <!-- Boutons suivant et précédent -->
-         <a class="prev" onclick=""</a>
-      </div>
+				<div class="row">
+					<div class="column">
+						<img class="demo cursor" src="images/slides/imagedanse1.jpg" alt="image1" style="width:100%" onclick="currentSlide(1)">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="images/slides/imagedanse2.jpg" alt="image2" style="width:100%" onclick="currentSlide(2)">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="images/slides/imagedanse3.jpg" alt="image3" style="width:100%" onclick="currentSlide(3)">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="images/slides/imagedanse4.jpg" alt="image4" style="width:100%" onclick="currentSlide(4)">
+					</div>
+				</div>
+	      </div>
+		</div>
 		<?php include('include/footer.php'); ?>
 	</body>
 </html>

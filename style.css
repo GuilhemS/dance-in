@@ -107,3 +107,91 @@ li.dropdown {
 .footer span {
 	color: white;
 }
+
+.photo {
+	box-sizing: border-box;
+}
+
+/* Position du container d'image. Nécessaire pour positionner les flèches de gauche et droite. */
+.image-slider {
+	position: relative;
+}
+
+/* Cache les photos par défaut */
+.mySlide {
+	display: none;
+	height: 50em;
+	width: 100em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+}
+
+/*  Ajoute un pointer au survol des thumbnails */
+.cursor {
+	cursor: pointer;
+}
+
+/* Bouton precedent et suivant */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* positionne le bouton "suivant" à droite */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* Change le style des boutons au survol */
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Indicateur du nombre d'images */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position absolute;
+	top 0;
+}
+
+/* Container pour les textes d'images */
+.caption-container {
+	text-align: center;
+	background-color: #222;
+	padding: 2px 16px;
+	color: white;
+}
+
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column {
+	float: left;
+	width: 16.66%;
+}
+
+/* Ajoute un effet de transparence aux thumbnails */
+.demo {
+	opacity: 0.6;
+}
+
+.active, .demo:hover {
+	opacity: 1;
+}
