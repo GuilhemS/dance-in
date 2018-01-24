@@ -15,20 +15,7 @@
 
 		<div class="contenu">
 
-		<?php
-		$bdd = new PDO('mysql:host=localhost;dbname=dance-in;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-		$reponse = $bdd->query('SELECT * FROM article WHERE titreArticle = "Acceuil";');
-
-		while ($donnees = $reponse->fetch()){
-		?>
-
-			<?= $donnees['contenu']; ?> </p>
-
-		<?php
-		}
-		$reponse->closeCursor(); // Termine le traitement de la requête
-		?>
 
 		</div>
 

@@ -1,7 +1,7 @@
 <nav>
    <ul class="navbar">
      <li>
-       <img src="images/logo.png" alt="Logo Dance'in" width="69px" id="logo"/>
+       <img src="images/logo.png" alt="Logo Dance'in" width="64px" id="logo"/>
      </li>
       <li class="active">
          <a href="index.php">Dance'in</a>
