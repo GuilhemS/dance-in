@@ -7,7 +7,6 @@ body{
 	background-repeat:no-repeat;
 	background-position: top;
 	margin:0;
-	text-align:center;
 }
 
 h1{
@@ -121,32 +120,30 @@ li.dropdown {
 	color: white;
 }
 
-.photo {
+* {
 	box-sizing: border-box;
 }
 
-/* Position du container d'image. Nécessaire pour positionner les flèches de gauche et droite. */
-.image-slider {
+/* Position the image container (needed to position the left and right arrows) */
+.container {
 	position: relative;
+    max-height: 600px;
+    max-width: 1080px;
 }
 
-/* Cache les photos par défaut */
-.mySlide {
+/* Hide the images by default */
+.mySlides {
 	display: none;
-	height: 50em;
-	width: 100em;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: auto;
 }
 
-/*  Ajoute un pointer au survol des thumbnails */
+/* Add a pointer when hovering over the thumbnail images */
 .cursor {
 	cursor: pointer;
 }
 
-/* Bouton precedent et suivant */
-.prev, .next {
+/* Next & previous buttons */
+.prev,
+.next {
 	cursor: pointer;
 	position: absolute;
 	top: 40%;
@@ -161,27 +158,28 @@ li.dropdown {
 	-webkit-user-select: none;
 }
 
-/* positionne le bouton "suivant" à droite */
+/* Position the "next button" to the right */
 .next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
 }
 
-/* Change le style des boutons au survol */
-.prev:hover, .next:hover {
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Indicateur du nombre d'images */
+/* Number text (1/3 etc) */
 .numbertext {
 	color: #f2f2f2;
 	font-size: 12px;
 	padding: 8px 12px;
-	position absolute;
-	top 0;
+	position: absolute;
+	top: 0;
 }
 
-/* Container pour les textes d'images */
+/* Container for image text */
 .caption-container {
 	text-align: center;
 	background-color: #222;
@@ -189,22 +187,24 @@ li.dropdown {
 	color: white;
 }
 
-.row:after{
+.row:after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
+/* Six columns side by side */
 .column {
 	float: left;
 	width: 16.66%;
 }
 
-/* Ajoute un effet de transparence aux thumbnails */
+/* Add a transparency effect for thumnbail images */
 .demo {
 	opacity: 0.6;
 }
 
-.active, .demo:hover {
+.active,
+.demo:hover {
 	opacity: 1;
 }

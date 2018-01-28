@@ -1,0 +1,14 @@
+<galerie>
+    <photo>
+        <nom>imagedanse1.jpg</nom>
+    </photo>
+    <photo>
+        <nom>imagedanse2.jpg</nom>
+    </photo>
+    <photo>
+        <nom>imagedanse3.jpg</nom>
+    </photo>
+    <photo>
+        <nom>imagedanse4.jpg</nom>
+    </photo>
+</galerie>

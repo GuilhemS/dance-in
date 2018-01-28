@@ -12,9 +12,6 @@
 
 	<body>
 		<?php include('include/nav.php'); ?>
-		<script type="text/javascript" src="slideshow.js">
-
-		</script>
 		<div class="photo">
 	      <div class="image-slider">
 	         <div class="mySlide">
@@ -58,6 +55,8 @@
 				</div>
 	      </div>
 		</div>
+		<script type="text/javascript" src="slideshow.js">
+		</script>
 		<?php include('include/footer.php'); ?>
 	</body>
 </html>
