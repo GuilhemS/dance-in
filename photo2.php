@@ -54,16 +54,16 @@
     <!-- Thumbnail images -->
     <div class="row">
         <div class="column">
-            <img class="demo cursor" src="images/slides/imagedanse1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            <img class="demo cursor" src="images/slides/imagedanse1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Danse contemporaine">
         </div>
         <div class="column">
-            <img class="demo cursor" src="images/slides/imagedanse2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+            <img class="demo cursor" src="images/slides/imagedanse2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Moche">
         </div>
         <div class="column">
-            <img class="demo cursor" src="images/slides/imagedanse3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            <img class="demo cursor" src="images/slides/imagedanse3.jpg" style="width:100%" onclick="currentSlide(3)" alt="thug life">
         </div>
         <div class="column">
-            <img class="demo cursor" src="images/slides/imagedanse4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+            <img class="demo cursor" src="images/slides/imagedanse4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Classique">
         </div>
     </div>
 </div>

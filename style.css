@@ -82,6 +82,10 @@ li.dropdown {
     display: inline-block;
 }
 
+li .active{
+    background-color: darkgreen;
+}
+
 .dropdown_menu {
     display: none;
     position: absolute;

@@ -22,10 +22,84 @@ $message_formulaire_invalide = "Formulaire invalide ! Vérifiez que tous les cha
 
 
 // On test si le formulaire a été soumis
-if(!isset($_POST['envoi'])){
+if (!isset($_POST['envoi'])) {
     echo '<p>'.$message_erreur_formulaire.'</p>'.'\n';
-}else{
+} else {
 
+    /*
+     * cette fonction sert à nettoyer et enregistrer un texte
+     */
+    function Rec($text) {
+        $text = htmlspecialchars(trim($text), ENT_QUOTES);
+        $text = nl2br($text);
+        echo '<p> Test : ' . $text . '</p>';
+        return $text;
+    };
+
+    /*
+     * Cette fonction sert à vérifier la syntaxe d'un email
+     */
+    function IsEmail($email) {
+        $value = preg_match('/^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!\.)){0,61}[a-zA-Z0-9_-]?\.)+[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!$)){0,61}[a-zA-Z0-9_]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/', $email);
+
+        if ($value === false ) {
+            echo '<p> fail is email </p>';
+        }
+
+        return (($value === 0) || ($value === false)) ? false : true;
+    }
+
+    // Formulaire envoyé on récupère tous les champs
+    $nom = (isset($_POST['$nom']) ? Rec($_POST['$nom']) : '');
+    $email = (isset($_POST['$email']) ? Rec($_POST['$email']) : '');
+    $objet = (isset($_POST['$objet']) ? Rec($_POST['$objet']) : '');
+    $message = (isset($_POST['$message']) ? Rec($_POST['$message']) : '');
+
+    // On vérifique l'email soit correct
+    $emai = (IsEmail($email) ? $email : '');
+
+    echo '<p> nom : ' . $nom . '</p>' . '\n';
+    echo '<p> email  : ' . $email . '</p>' . '\n';
+    echo '<p> objet : ' . $objet . '</p>' . '\n';
+
+    // On créé l'email seulement si les 4 champs sont correctement renseignés
+    if (($nom != '') && ($email != '') && ($objet != '') && ($message != '')) {
+        // On génère puis on envoie l'email
+        $headers = 'MIME-Version: 1.0' . '\r\n';
+        $headers .= 'From: ' . $nom . ' <' . $email . '>' . '\r\n' .
+                    'Reply-To: ' . $email . '\r\n' .
+                    'Content-Type : text/plain; charset="utf-8"; DelSp="Yes"; format=flowed ' . '\r\n' .
+                    'Content-Disposition : inline' . '\r\n' .
+                    'Content-Transfer-Encoding: 7bit' . '\r\n' .
+                    'X-Mailer:PHP/' . phpversion();
+
+        // Envoyer un copie au visiteur ?
+        if ($copie == 'oui') {
+            $cible = $destinataire . ';' . $email;
+        } else {
+            $cible = $destinataire;
+        }
+
+        // Envoi du mail
+        $num_emails = 0;
+        $tmp = explode(';', $cible);
+
+        foreach ($tmp as $email_destinataire) {
+            if (mail($email_destinataire, $objet, $message, $headers)) {
+                $num_emails++;
+            }
+        }
+        if ((($copie == 'oui') && ($num_emails == '2')) || (($copie == 'non') && ($num_emails == '1'))) {
+            echo '<p>' . $message_envoye . '</p>';
+        } else {
+            echo '<p>' . $message_non_envoye . '</p>';
+        }
+    } else {
+        // Le formulaire n'est pas correctement saisie
+        echo '<p>' . $message_formulaire_invalide . '<a href="formulaire.php"> Retour formulaire</a></p>' . '\n';
+    }
 }
+
+?>
 
 

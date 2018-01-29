@@ -26,9 +26,11 @@
                 <p><label for="message">Message : </label><textarea id="message" name="message" tabindex="4" cols="30" rows="8" /></p>
             </fieldset>
 
-            <div style="text-align: center"><input type="submit" name="envoi" value="Envoyer" /></div>
-        </form>
-    </div>
+        <fieldset>
+            <legend>Votre message :</legend>
+            <p><label for="objet">Objet : </label><input type="text" id="objet" name="objet" tabindex="3" /></p>
+            <p><label for="message">Message : </label><textarea id="message" name="message" tabindex="4" cols="30" rows="8"></textarea></p>
+        </fieldset>
 
 <?php include('include/footer.php'); ?>
 </body>

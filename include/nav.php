@@ -3,10 +3,10 @@
      <li>
        <img src="images/logo.png" alt="Logo Dance'in" width="64px" id="logo"/>
      </li>
-      <li class="active">
+      <li class="testActive">
          <a href="index.php">Dance'in</a>
       </li>
-      <li class="dropdown">
+      <li>
          <a href="photo2.php" class="dropbtn">Galerie</a>
       </li>
       <li>
@@ -20,9 +20,6 @@
       </li>
       <li>
          <a href="equipe.php">Equipe</a>
-      </li>
-      <li>
-         <a href="admin.php" class="admin" style="float:right">Admin</a>
       </li>
    </ul>
 </nav>
