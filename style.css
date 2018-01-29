@@ -7,6 +7,7 @@ body{
 	background-repeat:no-repeat;
 	background-position: top;
 	margin:0;
+	text-align:center;
 }
 
 h1{
@@ -34,6 +35,7 @@ div span p{
 	margin-left:100px;
 	margin-right:100px;
 	margin-top: 80px;
+	margin-bottom: 15px;
 	padding:20px;
 	color: white;
 }
@@ -45,7 +47,7 @@ address{
 }
 
 ul {
-    list-style-type: none;
+	  list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -103,16 +105,23 @@ li.dropdown {
     display: block;
 }
 
+.navbar{
+	position:fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	margin: 0px;
+}
+
 .footer
 {
-   position: fixed;
-   left: 0px;
-   right: 0px;
-   bottom: 0px;
+		margin-top:15px;
+		bottom:0;
+		left:0;
+		right:0;
    height: 45px;
-   margin: 0px;
    opacity: 0.9;
-	padding: 5px;
+	 padding: 5px;
    background-color: #333;
 }
 
@@ -120,30 +129,32 @@ li.dropdown {
 	color: white;
 }
 
-* {
+.photo {
 	box-sizing: border-box;
 }
 
-/* Position the image container (needed to position the left and right arrows) */
-.container {
+/* Position du container d'image. Nécessaire pour positionner les flèches de gauche et droite. */
+.image-slider {
 	position: relative;
-    max-height: 600px;
-    max-width: 1080px;
 }
 
-/* Hide the images by default */
-.mySlides {
+/* Cache les photos par défaut */
+.mySlide {
 	display: none;
+	height: 50em;
+	width: 100em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
+/*  Ajoute un pointer au survol des thumbnails */
 .cursor {
 	cursor: pointer;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
+/* Bouton precedent et suivant */
+.prev, .next {
 	cursor: pointer;
 	position: absolute;
 	top: 40%;
@@ -158,28 +169,27 @@ li.dropdown {
 	-webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* positionne le bouton "suivant" à droite */
 .next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+/* Change le style des boutons au survol */
+.prev:hover, .next:hover {
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
+/* Indicateur du nombre d'images */
 .numbertext {
 	color: #f2f2f2;
 	font-size: 12px;
 	padding: 8px 12px;
-	position: absolute;
-	top: 0;
+	position absolute;
+	top 0;
 }
 
-/* Container for image text */
+/* Container pour les textes d'images */
 .caption-container {
 	text-align: center;
 	background-color: #222;
@@ -187,24 +197,22 @@ li.dropdown {
 	color: white;
 }
 
-.row:after {
+.row:after{
 	content: "";
 	display: table;
 	clear: both;
 }
 
-/* Six columns side by side */
 .column {
 	float: left;
 	width: 16.66%;
 }
 
-/* Add a transparency effect for thumnbail images */
+/* Ajoute un effet de transparence aux thumbnails */
 .demo {
 	opacity: 0.6;
 }
 
-.active,
-.demo:hover {
+.active, .demo:hover {
 	opacity: 1;
 }
