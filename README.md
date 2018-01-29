@@ -7,3 +7,4 @@ source image background : http://www.adcm-danse.fr/
 - Parcours fichier xml pour photo
 - formulaire contact
 -contenu site
+-gerer remplissage tableau equipe avec BD

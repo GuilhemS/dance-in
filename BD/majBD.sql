@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 24 jan. 2018 à 14:09
+-- Généré le :  lun. 29 jan. 2018 à 17:09
 -- Version du serveur :  10.1.29-MariaDB
 -- Version de PHP :  7.2.0
 
@@ -51,7 +51,7 @@ CREATE TABLE `article` (
 --
 
 INSERT INTO `article` (`idArticle`, `titreArticle`, `dateArticle`, `contenu`) VALUES
-(1, 'Acceuil', '2018-01-21', 'bienvenue sur le site de danse !'),
+(1, 'Acceuil', '2018-01-21', '<h1>Bienvenue sur notre site !</h1>\r\n</br>\r\nCréée en 1995, l’école de Danse de Rodez propose aujourd’hui la pratique de la danse classique, du modern’jazz, des claquettes et du hip-hop.\r\n</br>\r\nTous les cours sont dispensés par des professeurs diplômé d’état, vous pouvez voir leur description ci-dessous.\r\n</br>\r\nLe planning de nos cours est également disponible sur le site.\r\n\r\nN\'hésitez pas à nous contacter pour plus d\'informations.'),
 (2, 'Acceuil', '2018-01-22', 'Allez voir notre galerie photo !!');
 
 -- --------------------------------------------------------
