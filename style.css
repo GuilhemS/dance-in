@@ -29,8 +29,7 @@ div span p{
 }
 
 .contenu{
-	background-color: black;
-	opacity: 0.9;
+	background:rgba(0,0,0,0.9);
 	border-radius: 20px;
 	margin-left:100px;
 	margin-right:100px;
@@ -38,6 +37,23 @@ div span p{
 	margin-bottom: 15px;
 	padding:20px;
 	color: white;
+}
+
+.arrondie{
+	border-radius:100px;
+	opacity: 1;
+	width: 150px;
+}
+
+.circle {
+	width: 200px;
+	height: 200px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	background-position: center;
+	background-repeat:no-repeat;
+	opacity:2;
 }
 
 address{

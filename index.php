@@ -39,13 +39,13 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 	<table style="width: 745px;" align="center">
 		<tr>
 			<td>
-				<img alt="Photo Marianne" src="images/Equipelogo.png" />
+				<div class="circle" style="background-image:url(images/chorégraphe.png);"></div>
 			</td>
 			<td>
-				<img alt="Photo Jeanne" src="images/Equipelogo.png" />
+				<div class="circle" style="background-image:url(images/Equipelogo.png);"></div>
 			</td>
 			<td>
-				<img alt="Photo Charlotte" src="images/Equipelogo.png" />
+				<div class="circle" style="background-image:url(images/Equipelogo.png);"></div></div>
 			</td>
 		</tr>
 		<tr>
