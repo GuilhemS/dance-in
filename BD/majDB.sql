@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 29 jan. 2018 à 17:09
+-- Généré le :  lun. 05 fév. 2018 à 14:30
 -- Version du serveur :  10.1.29-MariaDB
 -- Version de PHP :  7.2.0
 
@@ -25,10 +25,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `admin`
+-- Structure de la table `administrateur`
 --
 
-CREATE TABLE `admin` (
+DROP TABLE IF EXISTS `administrateur`;
+CREATE TABLE `administrateur` (
   `logAdmin` varchar(3) NOT NULL,
   `mdpAdmin` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -39,8 +40,10 @@ CREATE TABLE `admin` (
 -- Structure de la table `article`
 --
 
+DROP TABLE IF EXISTS `article`;
 CREATE TABLE `article` (
   `idArticle` int(3) NOT NULL,
+  `catArticle` varchar(20) NOT NULL,
   `titreArticle` varchar(20) NOT NULL,
   `dateArticle` date DEFAULT NULL,
   `contenu` varchar(30000) DEFAULT NULL
@@ -50,9 +53,9 @@ CREATE TABLE `article` (
 -- Déchargement des données de la table `article`
 --
 
-INSERT INTO `article` (`idArticle`, `titreArticle`, `dateArticle`, `contenu`) VALUES
-(1, 'Acceuil', '2018-01-21', '<h1>Bienvenue sur notre site !</h1>\r\n</br>\r\nCréée en 1995, l’école de Danse de Rodez propose aujourd’hui la pratique de la danse classique, du modern’jazz, des claquettes et du hip-hop.\r\n</br>\r\nTous les cours sont dispensés par des professeurs diplômé d’état, vous pouvez voir leur description ci-dessous.\r\n</br>\r\nLe planning de nos cours est également disponible sur le site.\r\n\r\nN\'hésitez pas à nous contacter pour plus d\'informations.'),
-(2, 'Acceuil', '2018-01-22', 'Allez voir notre galerie photo !!');
+INSERT INTO `article` (`idArticle`, `catArticle`, `titreArticle`, `dateArticle`, `contenu`) VALUES
+(1, '', 'Acceuil', '2018-01-21', '<h1>Bienvenue sur notre site !</h1>\r\n</br>\r\nCréée en 1995, l’école de Danse de Rodez propose aujourd’hui la pratique de la danse classique, du modern’jazz, des claquettes et du hip-hop.\r\n</br>\r\nTous les cours sont dispensés par des professeurs diplômé d’état, vous pouvez voir leur description ci-dessous.\r\n</br>\r\nLe planning de nos cours est également disponible sur le site.\r\n\r\nN\'hésitez pas à nous contacter pour plus d\'informations.'),
+(2, '', 'Acceuil', '2018-01-22', 'Allez voir notre galerie photo !!');
 
 -- --------------------------------------------------------
 
@@ -60,6 +63,7 @@ INSERT INTO `article` (`idArticle`, `titreArticle`, `dateArticle`, `contenu`) VA
 -- Structure de la table `photo`
 --
 
+DROP TABLE IF EXISTS `photo`;
 CREATE TABLE `photo` (
   `idPhoto` int(3) NOT NULL,
   `nomPhoto` varchar(20) DEFAULT NULL,
@@ -80,9 +84,9 @@ INSERT INTO `photo` (`idPhoto`, `nomPhoto`, `descPhoto`, `adrPhoto`) VALUES
 --
 
 --
--- Index pour la table `admin`
+-- Index pour la table `administrateur`
 --
-ALTER TABLE `admin`
+ALTER TABLE `administrateur`
   ADD PRIMARY KEY (`logAdmin`);
 
 --
