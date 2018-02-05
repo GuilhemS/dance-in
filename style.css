@@ -72,12 +72,12 @@ ul {
 
 li {
     float: left;
-		margin: 0px;
+    margin: 0px;
 }
 
 #logo {
-		margin-right: 20px;
-		margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 li a, .dropbtn {
@@ -86,8 +86,8 @@ li a, .dropbtn {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-		font-size: 28px;
-		font-family: Calibri;
+    font-size: 28px;
+    font-family: Calibri;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -126,7 +126,7 @@ li .active{
 }
 
 .navbar{
-	position:fixed;
+	position:relative;
 	left: 0px;
 	right: 0px;
 	top: 0px;
@@ -135,37 +135,36 @@ li .active{
 
 .footer
 {
-		margin-top:15px;
-		bottom:0;
-		left:0;
-		right:0;
-   height: 45px;
-   opacity: 0.9;
-	 padding: 5px;
-   background-color: #333;
+    position: fixed;
+    margin-top:15px;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 45px;
+    opacity: 0.9;
+    padding: 5px;
+    background-color: #333;
 }
 
 .footer span {
 	color: white;
 }
 
-.photo {
+* {
 	box-sizing: border-box;
 }
 
 /* Position du container d'image. Nécessaire pour positionner les flèches de gauche et droite. */
-.image-slider {
-	position: relative;
+.container {
+    display: block;
+    position: relative;
+    max-height: 600px;
+    max-width: 1080px;
 }
 
 /* Cache les photos par défaut */
-.mySlide {
+.mySlides {
 	display: none;
-	height: 50em;
-	width: 100em;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: auto;
 }
 
 /*  Ajoute un pointer au survol des thumbnails */
@@ -205,8 +204,8 @@ li .active{
 	color: #f2f2f2;
 	font-size: 12px;
 	padding: 8px 12px;
-	position absolute;
-	top 0;
+	position: absolute;
+	top: 0;
 }
 
 /* Container pour les textes d'images */
