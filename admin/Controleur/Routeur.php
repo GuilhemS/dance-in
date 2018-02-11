@@ -7,6 +7,7 @@
  */
 
 require_once 'Controleur/ControleurConnexion.php';
+require_once 'Controleur/ControleurArticles.php';
 
 class Routeur {
 
