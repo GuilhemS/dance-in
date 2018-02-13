@@ -16,6 +16,32 @@ class Routeur {
         if (isset($_GET['entite'])) {
 
             switch ($_GET['entite']) {
+                case 'Articles' :
+                    switch ($_GET['action']) {
+                        case 'R' : // R = Read = Lectures des articles ou d'un seul si parametre id
+                            if (isset($_GET['id'])) {
+                                $ctrlArt = new ControleurArticles();
+                                $ctrlArt->getArticleAccueil($_GET['id']);
+                            } else {
+                                $ctrlArt = new ControleurArticles();
+                                $ctrlArt->getListeArticleAccueil();
+                            }
+                            break;
+                        case 'U' : // U = Update = Modification d'un article a partir de son id
+                            if (isset($_GET['id'])) {
+                                $ctrlArt = new ControleurArticles();
+                                $ctrlArt->ModifArticleAccueil($_GET['id']);
+                            }
+                            break;
+                        case 'traiterU' : // Apres modification on traite la modification
+                            $ctrlArt = new ControleurArticles();
+                            $ctrlArt->traiterModif();
+                            break;
+                        default : // Pour toutes les autres valeurs de parametre action, on affiche la liste page
+                            $ctrlArt = new ControleurArticles();
+                            $ctrlArt->getListeArticleAccueil();
+                    }
+                    break;
                 case 'connexion' :
                     switch ($_GET['action']) {
                         case 'connexion' : // Si pas encore connecte
@@ -35,6 +61,24 @@ class Routeur {
                             break;
                     }
 
+                default: 	// pour toutes les autres valeurs du parametre 'entite', on affiche la liste des Categories
+                    if (isset($_GET['id'])) {
+                        $ctrlArt = new ControleurArticles();
+                        $ctrlArt->getArticleAccueil($_GET['id']);
+                    }
+                    else {
+                        $ctrlArt = new ControleurArticles();
+                        $ctrlArt->getListeArticleAccueil();
+                    }
+                    break;
+            }
+        } else {
+            if (isset($_SESSION['identifie'])) {
+                $ctrlArt = new ControleurArticles();
+                $ctrlArt->getListeArticleAccueil();
+            } else {
+                $connexion = new ControleurConnexion();
+                $connexion->getFormConn();
             }
         }
     }

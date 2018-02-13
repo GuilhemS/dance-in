@@ -15,10 +15,11 @@ class ModeleListeArticles {
     public function getListeAccueil() {
         // Variable conn initialisé dans le fichier connect.inc.php
         global $conn;
+        // $listeAccueil = null;
         $res = $conn->prepare("SELECT * FROM Articles WHERE catArticle = 'Accueil'");
         $res->execute();
         foreach ($res as $articles) {
-            $listeAccueil[] = new Articles($articles['id'], $articles['titre'], $articles['contenu']);
+            $listeAccueil[] = new Articles($articles['id'], $articles['categorie'], $articles['titre'], $articles['contenu']);
         }
         return $listeAccueil;
     }
@@ -28,7 +29,7 @@ class ModeleListeArticles {
         $res = $conn->prepare("SELECT * FROM article WHERE catArticle = 'Accueil' AND id = :pId");
         $res->execute(array('pId' => $id));
         $article = $res->fetch();
-        $unArticleAccueil = new Articles($article['id'], $article['titre'], $article['contenu']);
+        $unArticleAccueil = new Articles($article['id'], $article['categorie'], $article['titre'], $article['contenu']);
         return $unArticleAccueil;
     }
 
@@ -37,7 +38,7 @@ class ModeleListeArticles {
         $res = $conn->prepare("SELECT  * FROM Articles WHERE catArticle = 'Evenement'");
         $res->execute();
         foreach ($res as $articles) {
-            $listeEvenement[] = new Articles($articles['id'], $articles['titre'], $articles['contenu']);
+            $listeEvenement[] = new Articles($articles['id'], $articles['categorie'], $articles['titre'], $articles['contenu']);
         }
         return $listeEvenement;
     }
@@ -47,7 +48,7 @@ class ModeleListeArticles {
         $res = $conn->prepare("SELECT * FROM Articles WHERE catArticle = 'Evenement' AND  id = :pId");
         $res->execute(array('pId' => $id));
         $articleEvenement = $res->fetch();
-        $unArticleEvenement = new Articles($articleEvenement['id'], $articleEvenement['titre'], $articleEvenement['contenu']);
+        $unArticleEvenement = new Articles($articleEvenement['id'], $articleEvenement['categorie'], $articleEvenement['titre'], $articleEvenement['contenu']);
         return $unArticleEvenement;
     }
 
@@ -56,7 +57,7 @@ class ModeleListeArticles {
         $res = $conn->prepare("SELECT * FROM Articles WHERE catArticle = 'Planning'");
         $res->execute();
         foreach ($res as $articles) {
-            $listePlanning[] = new Articles($articles['id'], $articles['titre'], $articles['contenu']);
+            $listePlanning[] = new Articles($articles['id'], $articles['categorie'], $articles['titre'], $articles['contenu']);
         }
         return $listePlanning;
     }
@@ -66,7 +67,7 @@ class ModeleListeArticles {
         $res = $conn->prepare("SELECT * FROM Articles WHERE catArticle = 'Planning' AND id = :pId");
         $res->execute(array('pId' => $id));
         $articlePlanning = $res->fetch();
-        $unArticlePlanning = new Articles($articlePlanning['id'], $articlePlanning['titre'], $articlePlanning['contenu']);
+        $unArticlePlanning = new Articles($articlePlanning['id'], $articlePlanning['categorie'], $articlePlanning['titre'], $articlePlanning['contenu']);
         return $unArticlePlanning;
     }
 

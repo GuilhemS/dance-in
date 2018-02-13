@@ -12,3 +12,5 @@ source image background : http://www.adcm-danse.fr/
 - Menu Hamburger mediaQueries
 - Modifier BDD
 - Background responsive
+
+j'ai changé la BDD 

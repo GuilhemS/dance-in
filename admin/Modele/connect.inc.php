@@ -6,7 +6,7 @@
  * Time: 09:05
  */
     $user = 'root';
-    $mdp = 'beurredekarite';
+    $mdp = '';
     try {
         $conn = new PDO ('mysql:host=localhost;dbname=dance-in;charset=UTF8', $user, $mdp, array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
     }
