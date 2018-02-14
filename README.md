@@ -11,6 +11,6 @@ source image background : http://www.adcm-danse.fr/
 - Finir page admin (G)
 - Menu Hamburger mediaQueries
 - Modifier BDD
-- Background responsive
 
-j'ai changé la BDD 
+
+j'ai changé la BDD

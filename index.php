@@ -53,17 +53,6 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 
 </div>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 </section>
 <?php include('include/footer.php'); ?>
 </body>

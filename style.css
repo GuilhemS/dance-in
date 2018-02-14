@@ -6,32 +6,33 @@ html {
 body{
 	position: relative;
 	display: inline-block;
-	width:100%;
-	color:black;
+	width: 100%;
+	color: white;
 	background-color: rgb(190, 197, 202);
-	background-image:url(images/background.jpg);
-	background-repeat:no-repeat;
+	background-image: url(images/background.jpg);
+	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
-	margin:0;
-	text-align:center;
+	margin: 0;
+	text-align: center;
 	min-height: 100%;
+	font-family: Calibri;
+	font-size: 17px;
 }
 
 h1{
-	font-size:16px;
-	font-family: Arial;
+	font-size: 20px;
 	width: 100%;
 	text-align: center;
 }
 
 h2{
-	font-size:14px;
-	font-style:italic;
-	font-family: Arial;
+	font-size:18px;
+	font-style: italic;
+
 }
 
-div span p{
+div span p {
 	font-size:12px;
 	font-family: Arial;
 }
@@ -40,13 +41,17 @@ span {
 	margin: 20px 40px 20px 50px;
 }
 
+section {
+	margin-top: 7%;
+	margin-bottom: 7%;
+}
+
 .contenu{
 	background:rgba(0,0,0,0.9);
 	border-radius: 20px;
 	margin-left:5%;
 	margin-right:5%;
-	margin-top: 80px;
-	margin-bottom: 15px;
+	margin-top: 4%;
 	padding:20px;
 	color: white;
 	display: block;
@@ -78,7 +83,7 @@ address{
 }
 
 ul {
-	  list-style-type: none;
+	list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -93,8 +98,8 @@ li {
 #logo {
     margin-right: 20px;
     margin-left: 20px;
-	width: 64px;
-	height: 64px;
+	width: 63px;
+	height: 63px;
 }
 
 li a, .dropbtn {
@@ -119,7 +124,7 @@ li .active{
     background-color: darkgreen;
 }
 
-.dropdown_menu {
+/*.dropdown_menu {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -140,10 +145,10 @@ li .active{
 
 .dropdown:hover .dropdown_menu {
     display: block;
-}
+}*/
 
 .navbar{
-	position:relative;
+	position:fixed;
 	left: 0px;
 	right: 0px;
 	top: 0px;
@@ -155,46 +160,25 @@ li .active{
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
-	/*margin: auto;
-    height: auto;*/
     opacity: 0.9;
     padding: 5px;
     background-color: #333;
 	text-align: left;
 }
 
-.footer span {
-	color: white;
-	font-size: 20px;
-	font-family: Arial;
-}
-
 * {
 	box-sizing: border-box;
 }
 
-/* Position du container d'image. Nécessaire pour positionner les flèches de gauche et droite. */
-.container {
-    display: block;
-    position: relative;
-    max-height: 600px;
-    max-width: 1080px;
-}
-
-/* Cache les photos par défaut */
-.mySlides {
-	display: none;
-}
-
-/*  Ajoute un pointer au survol des thumbnails */
+/*  Ajoute un pointer au survol des thumbnails
 .cursor {
 	cursor: pointer;
-}
+}*/
 
 /* Bouton precedent et suivant */
 .prev, .next {
 	cursor: pointer;
-	position: absolute;
+	position: relative;
 	top: 40%;
 	width: auto;
 	padding: 16px;
@@ -223,7 +207,7 @@ li .active{
 	color: #f2f2f2;
 	font-size: 12px;
 	padding: 8px 12px;
-	position: absolute;
+	position: relative;
 	top: 0;
 }
 
@@ -257,7 +241,7 @@ li .active{
 
 /* Mise en page form Contact*/
 #contact {
-	margin: 20px;
+	margin: 30px;
 }
 
 fieldset {
@@ -265,4 +249,15 @@ fieldset {
 	font-size: 20px;
 	font-family: Arial;
 	margin: 20px;
+}
+
+textarea, input {
+	border-radius: 10px;
+}
+
+#boutonFrom:hover{
+	background-color: black;
+	cursor: pointer;
+	color: white;
+	opacity:0.7;
 }
