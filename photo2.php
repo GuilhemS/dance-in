@@ -49,7 +49,7 @@
                     $indice = 0;
                     foreach ($xml as $photo) {
                         echo '<div class="column">';
-                        echo '<img class ="demo cursor" src="images/slides/'.$photo->nom.'" style="width:100%" onclick="currentSlide('.$indice++.')" alt="'.$photo->desciption.'">';
+                        echo '<img class ="demo cursor" src="images/slides/'.$photo->nom.'" style="width:100%" onclick="currentSlide('.$indice++.')" alt="'.$photo->description.'">';
                         echo '</div>';
                     }
                     ?>

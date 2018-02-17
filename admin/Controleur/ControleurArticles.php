@@ -36,9 +36,30 @@ class ControleurArticles {
             $pdostat = $conn->prepare("UPDATE Articles SET titreArticle = ?, contenu = ? WHERE id = ?");
             $pdostat->execute(array($_POST['titreArticle']), $_POST['contenu'], $idArticle);
             $vArticle = $this->modeleArticles->getAccueil($idArticle);
-            include 'Vue/VueArticles.php';
+            include 'Vue/VueAccueil.php';
         } else {
             header('location:index.php?entite=Articles&action=U');
+        }
+    }
+
+    public function supprimerArticle($id) {
+        include('Modele/connect.inc.php');
+        $pdostat = $conn->prepare("DELETE FROM Articles WHERE idArticle = ?");
+        $pdostat->execute(array($id));
+        header('location:index.php?entite=Articles&msgErreur=Element supprime avec succes');
+    }
+
+    public function ajouterArticle() {
+        include 'Vue/VueAjout.php';
+    }
+
+    public function traiterAjout() {
+        if (isset($_POST['Valider'])) {
+            include ('Modele/connect.inc.php');
+            $pdostat = $conn->prepare("INSERT INTO Articles (catArticle, titreArticle, dateArticle, contenu) VALUES ?, ?, ?, ?;");
+            $pdostat->execute(array($_POST['catArticle'], $_POST['titreArticle'], date('dmY'), $_POST['contenu']));
+        } else {
+            header('location:index.php?entite=Articles&action=U&msgErreur=Erreur lors de l\'ajout de l\'article ...');
         }
     }
 }

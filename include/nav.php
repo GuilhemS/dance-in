@@ -7,7 +7,7 @@
          <a href="index.php">Dance'in</a>
       </li>
       <li>
-         <a href="photo2.php" class="dropbtn">Galerie</a>
+         <a href="photo2.php">Galerie</a>
       </li>
       <li>
          <a href="planning.php">Planning</a>

@@ -37,6 +37,17 @@ class Routeur {
                             $ctrlArt = new ControleurArticles();
                             $ctrlArt->traiterModif();
                             break;
+                        case 'D' : // D = Delete = Suppression de l'article
+                            $ctrlArt = new ControleurArticles();
+                            $ctrlArt->supprimerArticle($_GET['id']);
+                            break;
+                        case 'A' : // A = Add = Ajout d'un nouvel article
+                            $ctrlArt = new ControleurArticles();
+                            $ctrlArt->ajouterArticle();
+                            break;
+                        case 'traiterA' : // Traitement de l'ajout d'un nouvel article
+                            $ctrlArt = new ControleurArticles();
+                            $ctrlArt->traiterAjout();
                         default : // Pour toutes les autres valeurs de parametre action, on affiche la liste page
                             $ctrlArt = new ControleurArticles();
                             $ctrlArt->getListeArticleAccueil();
@@ -61,6 +72,12 @@ class Routeur {
                             break;
                     }
 
+                case 'Accueil' :
+                    if (isset($_SESSION['identifie'])) {
+                        include 'Vue/VueAccueil.php';
+                    } else {
+
+                    }
                 default: 	// pour toutes les autres valeurs du parametre 'entite', on affiche la liste des Categories
                     if (isset($_GET['id'])) {
                         $ctrlArt = new ControleurArticles();
@@ -74,8 +91,9 @@ class Routeur {
             }
         } else {
             if (isset($_SESSION['identifie'])) {
-                $ctrlArt = new ControleurArticles();
-                $ctrlArt->getListeArticleAccueil();
+                /*$ctrlArt = new ControleurArticles();
+                $ctrlArt->getListeArticleAccueil();*/
+                include 'Vue/VueAccueil.php';
             } else {
                 $connexion = new ControleurConnexion();
                 $connexion->getFormConn();

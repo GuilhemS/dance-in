@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: guilhem
- * Date: 14/02/18
- * Time: 10:40
+ * Date: 17/02/18
+ * Time: 14:39
  */
 ?>
 
@@ -33,28 +33,29 @@
 
 <body>
 <?php include('include/nav.php'); ?>
-    <div class="contenu_blanc">
-    <?php
-    if (isset($_GET['msgErreur'])) {
-        echo "<BR/><h2>".$_GET['msgErreur']."</h2>";
-    }
-    ?>
-        <div class="titre"
+<div class="contenu_blanc">
+    <div class="titre" align="center">
         Veuillez entrer les informations du nouvel article :
-        <form method='post' action='index.php?entite=Articles&action=traiterU' enctype="multipart/form-data">
-            <table align="center">
-                <tr><td align="right">ID :</td>
-                    <?php
-                    echo '<td><input type="text" disabled="disabled" name="id" value="'.$vAccueil->id.'"></td></tr>';
-                    echo '<td><input type="hidden" name="id" value="'.$vAccueil->id.'"/></td></tr>';
-                    echo '<tr><td align="right">TITRE :</td>';
-                    echo '<td><input type="text" value="'.$vAccueil->titre.'" name="titre" /></td></tr>';
-                    echo '<tr><td align="right">CONTENU :</td>';
-                    ?>
-                    <td>
+    </div>
+    <br/>
+    <form method='post' action='index.php?entite=Articles&action=traiterA' enctype="multipart/form-data">
+        <table align="center">
+            <tr><td align="right">Categorie : </td>
+                <td><select name="categorie" id="categorie">
+                        <option value="accueil">Accueil</option>
+                        <option value="planning">Planning</option>
+                        <option value="evenement">Evenement</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td align="right">Titre : </td>
+                <td><input type="text" name="titre" id="titre" maxlength="20"></td>
+            </tr>
+            <tr>
+                <td align="right">Contenu : </td>
+                <td>
                     <div class="standalone-container">
                         <div id="snow-container">
-                            <?php echo $vAccueil->contenu;?>
                         </div>
                     </div>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
@@ -62,13 +63,15 @@
                     <script src="../quill.min.js"></script>
                     <script>
                         var quill = new Quill('#snow-container', {
+                            placeholder: 'Ecrire contenu de l\'article',
                             theme: 'snow'
                         });
                     </script>
-                    </td>
-                <tr><td align="center"><input type='submit' name='Valider' value="Valider"/></td></tr>
-            </table>
-        </form>
-    </div>
+                </td>
+            </tr>
+            <tr><td align="right"><input type='submit' name='Valider' value="Valider"/></td></tr>
+        </table>
+    </form>
+</div>
 </body>
 </html>

@@ -19,7 +19,7 @@
 </head>
 
 <body>
-<?php include('../include/nav.php'); ?>
+<?php include('include/nav.php'); ?>
 <div class="contenu">
     <?php
     if (isset($_GET['msgErreur'])) {
@@ -33,7 +33,7 @@
             <table border="2" align="center">
                 <div class="liste">
                     <tbody style="align:center">
-                        <tr><th>id</th><th>categorie</th><th>titre</th><th>modifier</th></tr>
+                        <tr><th>id</th><th>categorie</th><th>titre</th><th>modifier</th><th>supprimer</th></tr>
                     </tbody>
                     <?php
                     foreach ($vListeAccueil as $vLstArtc) {
@@ -42,6 +42,8 @@
                         echo '<td>'.$vLstArtc->titre.'</td>';
                         echo '<td align="center"><a href="index.php?entite=Articles&action=U&id='.$vLstArtc->id.'"><img src="include/modifier.gif"
 															alt="modifier.gif" /></a></td>';
+                        echo '<td align="center"><a href="index.php?entite=Articles&action=D&id='.$vLstArtc->id.'" onclick="return confirm(\"Etes vous sur de vouloir supprimer cet element?\")">
+                                                            <img src="include/corbeille.png" alt="corbeille.png" /></a></td>';
                         echo '</tr>';
                     }
                     ?>
@@ -53,7 +55,8 @@
         }
     }
     ?>
+    <br/>
+    <a href="index.php?entite=Articles&action=A">Ajouter un article</a>
 </div>
-<?php include('../include/footer.php'); ?>
 </body>
 </html>

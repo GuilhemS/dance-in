@@ -19,7 +19,6 @@
     </head>
 
     <body>
-    <?php include('../include/nav.php'); ?>
     <div class="contenu">
         <?php
             if (isset($_GET['msgErreur'])) {
@@ -34,7 +33,8 @@
                 <div style="text-align: center"><input type="submit" name="Valider" value="Valider" /></div>
             </fieldset>
         </form>
+        <br/>
+        <p><a href="../index.php">Retour site</a></p>
     </div>
-    <?php include('../include/footer.php'); ?>
     </body>
 </html>
