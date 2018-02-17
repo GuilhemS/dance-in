@@ -1,14 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <galerie>
     <photo>
         <nom>imagedanse1.jpg</nom>
+        <description>Danse contemporaine</description>
     </photo>
     <photo>
         <nom>imagedanse2.jpg</nom>
+        <description>Moche</description>
     </photo>
     <photo>
         <nom>imagedanse3.jpg</nom>
+        <description>thug life</description>
     </photo>
     <photo>
         <nom>imagedanse4.jpg</nom>
+        <description>Classique</description>
     </photo>
 </galerie>

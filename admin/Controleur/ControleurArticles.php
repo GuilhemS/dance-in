@@ -24,7 +24,7 @@ class ControleurArticles {
         include 'Vue/VueArticles.php';
     }
 
-    public function ModifArticleAccueil($id) {
+    public function modifArticleAccueil($id) {
         $vAccueil = $this->modeleArticles->getAccueil($id);
         include 'Vue/VueModif.php';
     }
@@ -33,9 +33,8 @@ class ControleurArticles {
         if (isset($_POST['Valider'])) {
             $idArticle = $_POST['id'];
             include('Modele/connect.inc.php');
-            $pdostat = $conn->prepare("UPDATE Artciles SET titre = ?, contenu = ? WHERE id = ?");
-            $pdostat->execute(array($_POST['titre']), $_POST['contenu'], $idArticle);
-
+            $pdostat = $conn->prepare("UPDATE Articles SET titreArticle = ?, contenu = ? WHERE id = ?");
+            $pdostat->execute(array($_POST['titreArticle']), $_POST['contenu'], $idArticle);
             $vArticle = $this->modeleArticles->getAccueil($idArticle);
             include 'Vue/VueArticles.php';
         } else {

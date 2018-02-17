@@ -29,14 +29,16 @@
         if (count($vListeAccueil) >= 1) {
             ?>
             Liste des articles :
-            <table border="2">
+            <br/><br/>
+            <table border="2" align="center">
                 <div class="liste">
                     <tbody style="align:center">
-                        <tr><th>id</th><th>titre</th><th>modifier</th></tr>
+                        <tr><th>id</th><th>categorie</th><th>titre</th><th>modifier</th></tr>
                     </tbody>
                     <?php
                     foreach ($vListeAccueil as $vLstArtc) {
-                        echo '<tr><td><a href="index.php?entite=Articles&action=R&id='.$vLstArtc->id.'"></a></td>';
+                        echo '<tr><td>'.$vLstArtc->id.'</td>';
+                        echo '<td>'.$vLstArtc->categorie.'</td>';
                         echo '<td>'.$vLstArtc->titre.'</td>';
                         echo '<td align="center"><a href="index.php?entite=Articles&action=U&id='.$vLstArtc->id.'"><img src="include/modifier.gif"
 															alt="modifier.gif" /></a></td>';

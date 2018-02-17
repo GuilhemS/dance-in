@@ -30,7 +30,7 @@ class Routeur {
                         case 'U' : // U = Update = Modification d'un article a partir de son id
                             if (isset($_GET['id'])) {
                                 $ctrlArt = new ControleurArticles();
-                                $ctrlArt->ModifArticleAccueil($_GET['id']);
+                                $ctrlArt->modifArticleAccueil($_GET['id']);
                             }
                             break;
                         case 'traiterU' : // Apres modification on traite la modification

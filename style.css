@@ -13,8 +13,7 @@ body{
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
-	margin: 0;
-	text-align: center;
+	margin:0;
 	min-height: 100%;
 	font-family: Calibri;
 	font-size: 17px;
@@ -37,7 +36,7 @@ div span p {
 	font-family: Arial;
 }
 
-span {
+.presentation {
 	margin: 20px 40px 20px 50px;
 }
 
@@ -56,6 +55,7 @@ section {
 	color: white;
 	display: block;
 	min-width: 250px;
+    text-align:center;
 }
 
 .arrondie{
@@ -260,4 +260,27 @@ textarea, input {
 	cursor: pointer;
 	color: white;
 	opacity:0.7;
+}
+
+.standalone-container {
+	margin: 50px auto;
+	max-width: 720px;
+}
+
+#snow-container {
+	height: 350px;
+    width: 720px;
+}
+
+.contenu_blanc{
+	background:rgba(255,255,255,0.9);
+	border-radius: 20px;
+	margin-left:5%;
+	margin-right:5%;
+	margin-top: 80px;
+	margin-bottom: 15px;
+	padding:20px;
+	color: black;
+	display: block;
+	min-width: 250px;
 }

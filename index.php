@@ -38,18 +38,18 @@ $reponse->closeCursor(); // Termine le traitement de la requête
 
 <div class="contenu" style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">
 
-	<SPAN>
+	<span class="presentation">
 		<div class="circle" style="background-image:url(images/chorégraphe.png);"></div>
 		<div style="width:200px"> Marianne est la fondatrice de l'école elle enseigne la danse classique et le contemporain. </div>
-	</SPAN>
-	<SPAN>
+	</span>
+	<span class="presentation">
 		<div class="circle" style="background-image:url(images/Equipelogo.png);"></div>
 		<div style="width:200px"> Jeanne enseigne depuis 10 ans maintenant le hip-hop. </div>
-	</SPAN>
-	<SPAN>
+	</span>
+	<span class="presentation">
 		<div class="circle" style="background-image:url(images/Equipelogo.png);"></div>
 		<div style="width:200px"> Charlotte a fini sa formation à l'opéra de Paris la saison dernière elle enseigne les claquettes et le modern jazz. </div>
-	</SPAN>
+	</span>
 
 </div>
 
