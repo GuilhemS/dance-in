@@ -24,11 +24,16 @@
             <!-- Container for the image gallery -->
             <div class="contenu">
                 <?php
+                // récupération du nom de fichier xml
                 $fichier = "galerie.xml";
+                // Chargement du contenu du fichier xml dans une variable grace a la fonction simplexml_load_file()
+                // On peut afficher le contenu de cette variable avec print_r($xml)
                 $xml = simplexml_load_file($fichier);
                 $longueur = 0;
+                // Simple parcours de la variable $xml qui parcours le contenu de note fichier xml
                 foreach ($xml as $photo) {
                     echo '<div class="mySlides">';
+                    // On peut recuperer le contenu de chaque balise de chaque element xml avec $photo->[nom de la balise]
                     echo '<img src="images/slides/'.$photo->nom.'" style="width:100%">';
                     echo '</div>';
                     $longueur ++;
