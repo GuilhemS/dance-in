@@ -239,6 +239,29 @@ li .active{
 	opacity: 1;
 }
 
+/* Page planning */
+#planning {
+	align: center;
+	border: 5px solid ;
+	border-spacing: 0;
+	border-color: grey;
+	width: 70%;
+	font-size: 20px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+th {
+	background-color: grey;
+}
+
+td {
+	border: 1px solid;
+	padding: 20px;
+	border-color: white;
+}
+
+
 /* Mise en page form Contact*/
 #contact {
 	margin: 30px;

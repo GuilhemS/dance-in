@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 05 fév. 2018 à 14:30
+-- Généré le :  lun. 19 fév. 2018 à 14:54
 -- Version du serveur :  10.1.29-MariaDB
 -- Version de PHP :  7.2.0
 
@@ -24,6 +24,9 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+DROP TABLE IF EXISTS `admin`;
+DROP TABLE IF EXISTS `article`;
+
 --
 -- Structure de la table `administrateur`
 --
@@ -37,11 +40,11 @@ CREATE TABLE `administrateur` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `article`
+-- Structure de la table `articles`
 --
 
-DROP TABLE IF EXISTS `article`;
-CREATE TABLE `article` (
+DROP TABLE IF EXISTS `articles`;
+CREATE TABLE `articles` (
   `idArticle` int(3) NOT NULL,
   `catArticle` varchar(20) NOT NULL,
   `titreArticle` varchar(20) NOT NULL,
@@ -50,12 +53,14 @@ CREATE TABLE `article` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `article`
+-- Déchargement des données de la table `articles`
 --
 
-INSERT INTO `article` (`idArticle`, `catArticle`, `titreArticle`, `dateArticle`, `contenu`) VALUES
-(1, '', 'Acceuil', '2018-01-21', '<h1>Bienvenue sur notre site !</h1>\r\n</br>\r\nCréée en 1995, l’école de Danse de Rodez propose aujourd’hui la pratique de la danse classique, du modern’jazz, des claquettes et du hip-hop.\r\n</br>\r\nTous les cours sont dispensés par des professeurs diplômé d’état, vous pouvez voir leur description ci-dessous.\r\n</br>\r\nLe planning de nos cours est également disponible sur le site.\r\n\r\nN\'hésitez pas à nous contacter pour plus d\'informations.'),
-(2, '', 'Acceuil', '2018-01-22', 'Allez voir notre galerie photo !!');
+INSERT INTO `articles` (`idArticle`, `catArticle`, `titreArticle`, `dateArticle`, `contenu`) VALUES
+(1, 'Accueil', 'Msg bienvenue', '2018-01-21', '<h1>Bienvenue sur notre site !</h1>\r\n</br>\r\nCréée en 1995, l’école de Danse de Rodez propose aujourd’hui la pratique de la danse classique, du modern’jazz, des claquettes et du hip-hop.\r\n</br>\r\nTous les cours sont dispensés par des professeurs diplômé d’état, vous pouvez voir leur description ci-dessous.\r\n</br>\r\nLe planning de nos cours est également disponible sur le site.\r\n\r\nN\'hésitez pas à nous contacter pour plus d\'informations.'),
+(2, 'Accueil', 'env vers galerie', '2018-01-22', 'Allez voir notre galerie photo !!'),
+(3, 'evenement', 'lancement', '2018-02-19', 'Premier stage de l\'année pour l\'ouverture de notre école !\r\n</br>\r\nVenez découvrir tous les styles de danse enseignés dans notre école.'),
+(4, 'evenement', 'rentrée', '2018-02-22', 'Début des cours de danse classique.   \r\nVenez vous inscrire directement à l\'école.');
 
 -- --------------------------------------------------------
 
@@ -90,9 +95,9 @@ ALTER TABLE `administrateur`
   ADD PRIMARY KEY (`logAdmin`);
 
 --
--- Index pour la table `article`
+-- Index pour la table `articles`
 --
-ALTER TABLE `article`
+ALTER TABLE `articles`
   ADD PRIMARY KEY (`idArticle`);
 
 --
@@ -106,10 +111,10 @@ ALTER TABLE `photo`
 --
 
 --
--- AUTO_INCREMENT pour la table `article`
+-- AUTO_INCREMENT pour la table `articles`
 --
-ALTER TABLE `article`
-  MODIFY `idArticle` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `articles`
+  MODIFY `idArticle` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `photo`

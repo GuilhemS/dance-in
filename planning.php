@@ -15,7 +15,50 @@
 
 		<div class="contenu">
 
-
+			<p style="font-size: 30px; font-weight:bold;"> Planning 2017/2018 </p>
+			</br>
+			<table id="planning">
+				<tr>
+					<th>  </th>
+					<th> LUNDI </th>
+					<th> MARDI </th>
+					<th> MERCREDI </th>
+					<th> JEUDI </th>
+					<th> VENDREDI </th>
+				</tr>
+				<tr>
+					<th> 11h - 12h </th>
+					<td> Danse Modern-Jazz </td>
+					<td> Danse Modern-Jazz </td>
+					<td> Hip-Hop </td>
+					<td> Claquettes </td>
+					<td> Danse classique </td>
+				</tr>
+				<tr>
+					<th> 12h - 13h </th>
+					<td> Danse classique </td>
+					<td> Danse Modern-Jazz </td>
+					<td> Danse classique </td>
+					<td> Danse Modern-Jazz </td>
+					<td> Danse Hip-Hop </td>
+				</tr>
+				<tr>
+					<th> 17h - 18h </th>
+					<td> Danse Hip-Hop </td>
+					<td> Danse classique </td>
+					<td> Claquettes </td>
+					<td> Danse classique </td>
+					<td> Danse classique </td>
+				</tr>
+				<tr>
+					<th> 18h - 19h </th>
+					<td> / </td>
+					<td> / </td>
+					<td> Danse classique </td>
+					<td> Danse classique </td>
+					<td> Danse Modern-Jazz </td>
+				</tr>
+			</table>
 
 		</div>
 
