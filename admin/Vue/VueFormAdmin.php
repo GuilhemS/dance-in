@@ -1,13 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: guilhem
- * Date: 31/01/18
- * Time: 16:34
- */
-?>
-
-
 <!DOCTYPE html>
 <html>
     <head>

@@ -20,7 +20,8 @@ class ControleurConnexion {
             } else {
                 // Cas ou l'identification est correct
                 $_SESSION['identifie'] = 'OK';
-                header('location:index.php?entite=Articles&action=R');
+                echo 'le cul';
+                header('location:index.php?entite=Accueil');
             }
         } else {
             // Tentative frauduleuse d'accéder à cette page sans passer par l'identification

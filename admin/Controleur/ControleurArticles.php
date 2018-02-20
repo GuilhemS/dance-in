@@ -5,7 +5,9 @@
  * Date: 07/02/18
  * Time: 14:49
  */
+
 include_once("Modele/ModeleArticles.php");
+
 class ControleurArticles {
     private $modeleArticles;
 
@@ -33,8 +35,8 @@ class ControleurArticles {
         if (isset($_POST['Valider'])) {
             $idArticle = $_POST['id'];
             include('Modele/connect.inc.php');
-            $pdostat = $conn->prepare("UPDATE Articles SET titreArticle = ?, contenu = ? WHERE id = ?");
-            $pdostat->execute(array($_POST['titreArticle']), $_POST['contenu'], $idArticle);
+            $pdostat = $conn->prepare("UPDATE Articles SET titreArticle = ?, contenu = ? WHERE idArticle = ?");
+            $pdostat->execute(array($_POST['titre'], $_POST['editor'], $idArticle));
             $vArticle = $this->modeleArticles->getAccueil($idArticle);
             include 'Vue/VueAccueil.php';
         } else {
@@ -56,8 +58,8 @@ class ControleurArticles {
     public function traiterAjout() {
         if (isset($_POST['Valider'])) {
             include ('Modele/connect.inc.php');
-            $pdostat = $conn->prepare("INSERT INTO Articles (catArticle, titreArticle, dateArticle, contenu) VALUES ?, ?, ?, ?;");
-            $pdostat->execute(array($_POST['catArticle'], $_POST['titreArticle'], date('dmY'), $_POST['contenu']));
+            $pdostat = $conn->prepare("INSERT INTO Articles ('catArticle', 'titreArticle', 'dateArticle', 'contenu') VALUES ?, ?, ?, ?;");
+            $pdostat->execute(array($_POST['categorie'], $_POST['titre'], date('dmY'), $_POST['editor']));
         } else {
             header('location:index.php?entite=Articles&action=U&msgErreur=Erreur lors de l\'ajout de l\'article ...');
         }

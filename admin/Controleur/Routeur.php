@@ -8,6 +8,7 @@
 
 require_once 'Controleur/ControleurConnexion.php';
 require_once 'Controleur/ControleurArticles.php';
+require_once 'Controleur/ControleurGalerie.php';
 
 class Routeur {
 
@@ -53,6 +54,22 @@ class Routeur {
                             $ctrlArt->getListeArticleAccueil();
                     }
                     break;
+                case 'Galerie' :
+                    switch ($_GET['action']) {
+                        case 'R' :
+                            $ctrlGlr = new ControleurGalerie();
+                            $ctrlGlr->getListePhoto();
+                            break;
+                        case 'D' :
+                            $ctrlGlr = new ControleurGalerie();
+                            $ctrlGlr->supprimerPhoto($_GET['id']);
+                            break;
+                        case 'A' :
+                            $ctrlGlr = new ControleurGalerie();
+                            $ctrlGlr->ajouterPhoto();
+                            break;
+                    }
+                    break;
                 case 'connexion' :
                     switch ($_GET['action']) {
                         case 'connexion' : // Si pas encore connecte
@@ -66,6 +83,7 @@ class Routeur {
                         case 'deconnexion' : // Deconnexion
                             $deconnexion = new ControleurConnexion();
                             $deconnexion->deconnexion();
+                            break;
                         default : // Pour tout autre valeur on affiche la page de connexion
                             $connexion = new ControleurConnexion();
                             $connexion->getFormConn();
@@ -75,8 +93,11 @@ class Routeur {
                 case 'Accueil' :
                     if (isset($_SESSION['identifie'])) {
                         include 'Vue/VueAccueil.php';
+                        break;
                     } else {
-
+                        $connexion = new ControleurConnexion();
+                        $connexion->getFormConn();
+                        break;
                     }
                 default: 	// pour toutes les autres valeurs du parametre 'entite', on affiche la liste des Categories
                     if (isset($_GET['id'])) {

@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css" />
     <link rel="stylesheet" href="../quill.snow.css" />
+    <script src="JS/getEditorText.js"></script>
 </head>
 
 <body>
@@ -39,16 +40,16 @@
         echo "<BR/><h2>".$_GET['msgErreur']."</h2>";
     }
     ?>
-        <div class="titre"
         Veuillez entrer les informations du nouvel article :
-        <form method='post' action='index.php?entite=Articles&action=traiterU' enctype="multipart/form-data">
+        <br/>
+        <form method='post' id="formModif" action='index.php?entite=Articles&action=traiterU' enctype="multipart/form-data" onsubmit="javascript:submit_contenu();">
             <table align="center">
                 <tr><td align="right">ID :</td>
                     <?php
                     echo '<td><input type="text" disabled="disabled" name="id" value="'.$vAccueil->id.'"></td></tr>';
-                    echo '<td><input type="hidden" name="id" value="'.$vAccueil->id.'"/></td></tr>';
+                    echo '<td><input type="hidden" name="id" value="'.$vAccueil->id.'"></td></tr>';
                     echo '<tr><td align="right">TITRE :</td>';
-                    echo '<td><input type="text" value="'.$vAccueil->titre.'" name="titre" /></td></tr>';
+                    echo '<td><input type="text" value="'.$vAccueil->titre.'" name="titre"></td></tr>';
                     echo '<tr><td align="right">CONTENU :</td>';
                     ?>
                     <td>
@@ -66,7 +67,9 @@
                         });
                     </script>
                     </td>
-                <tr><td align="center"><input type='submit' name='Valider' value="Valider"/></td></tr>
+                </tr>
+                <input type="hidden" name="editor" value="">
+                <tr><td align="center"><input type="submit" name="Valider" value="Valider"></td></tr>
             </table>
         </form>
     </div>

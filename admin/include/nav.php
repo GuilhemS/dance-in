@@ -19,7 +19,7 @@
             <a href="index.php?entite=Articles">Modification articles</a>
         </li>
         <li>
-            <a href="photo2.php">Modification galerie</a>
+            <a href="index.php?entite=Galerie&action=R">Modification galerie</a>
         </li>
     </ul>
 </nav>

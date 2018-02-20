@@ -38,7 +38,7 @@
         Veuillez entrer les informations du nouvel article :
     </div>
     <br/>
-    <form method='post' action='index.php?entite=Articles&action=traiterA' enctype="multipart/form-data">
+    <form method='post' id="formModif" action='index.php?entite=Articles&action=traiterA' enctype="multipart/form-data" onsubmit="javascript:submit_contenu()">
         <table align="center">
             <tr><td align="right">Categorie : </td>
                 <td><select name="categorie" id="categorie">
@@ -69,6 +69,7 @@
                     </script>
                 </td>
             </tr>
+            <input type="hidden" name="editor" value="">
             <tr><td align="right"><input type='submit' name='Valider' value="Valider"/></td></tr>
         </table>
     </form>
