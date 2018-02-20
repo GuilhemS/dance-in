@@ -4,7 +4,6 @@ source image background : http://www.adcm-danse.fr/
 
 # TO-DO list
 - contenu site
-- gerer remplissage tableau equipe avec BD
 - Finir page admin (G)
 - Menu Hamburger mediaQueries
 - Modifier BDD

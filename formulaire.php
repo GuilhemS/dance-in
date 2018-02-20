@@ -16,6 +16,8 @@
         <section>
 
             <div class="contenu">
+                <h1> N'hésitez pas a nous contacter en remplissant le formulaire ci-dessous, nous vous répondrons dans les plus brefs delais ! </h1>
+
                 <form id="contact" method="post" action="traitement_formulaire.php">
                     <fieldset>
                         <legend>Vos coordonnées :</legend>

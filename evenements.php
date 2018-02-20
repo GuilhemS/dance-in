@@ -12,12 +12,29 @@
 
 	<body>
 		<?php include('include/nav.php');?>
+		<section>
+				<div class="contenu">
 
-		<div class="contenu">
+					<?php
+					$bdd = new PDO('mysql:host=localhost;dbname=dance-in;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
+					$reponse = $bdd->query('SELECT * FROM Articles WHERE catArticle = "evenement";');
 
+					while ($donnees = $reponse->fetch()){
+						?>
+						<div class="noteEvenement">
+							<blockquote class="note verte">
+								<?= $donnees['contenu']; ?>
+							</blockquote>
+						</div>
 
-		</div>
+							<?php
+						}
+						$reponse->closeCursor(); // Termine le traitement de la requête
+						?>
+
+				</div>
+
 
 		<?php include('include/footer.php'); ?>
 	</body>

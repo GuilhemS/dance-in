@@ -1,0 +1,21 @@
+/* Page Equipe */
+.contenu{
+    text-align:left;
+}
+
+.circle {
+	width: 200px;
+	height: 200px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	background-position: center;
+	background-repeat:no-repeat;
+	opacity:2;
+	margin-left: 0;
+	display: inline-block;
+}
+
+p {
+	display: inline-block;
+}
