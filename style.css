@@ -45,6 +45,11 @@ section {
 	margin-bottom: 7%;
 }
 
+a {
+	text-decoration: none;
+	color: pink;
+}
+
 .contenu{
 	background:rgba(0,0,0,0.9);
 	border-radius: 20px;
@@ -154,6 +159,13 @@ li .active{
 	top: 0px;
 	margin: 0px;
 	z-index: 2;
+}
+
+/* meu Hamburger */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .navbar {
+
+  }
 }
 
 .footer
