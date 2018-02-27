@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css" />
     <link rel="stylesheet" href="../quill.snow.css" />
+    <script src="JS/getEditorText.js"></script>
 </head>
 
 <body>
@@ -42,9 +43,8 @@
         <table align="center">
             <tr><td align="right">Categorie : </td>
                 <td><select name="categorie" id="categorie">
-                        <option value="accueil">Accueil</option>
-                        <option value="planning">Planning</option>
-                        <option value="evenement">Evenement</option>
+                        <option value="Accueil">Accueil</option>
+                        <option value="Evenement">Evenement</option>
                     </select></td>
             </tr>
             <tr>

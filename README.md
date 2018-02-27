@@ -5,6 +5,6 @@ source image background : http://www.adcm-danse.fr/
 # TO-DO list
 - Finir page admin (G)
 - Menu Hamburger mediaQueries
-- Faire fonctionner modification article
-- Faire fonctionner ajout article
 - Gestion photo admin
+- Nettoyage BDD
+- Le trait de la page d'accueil ne s'affiche qu'une fois

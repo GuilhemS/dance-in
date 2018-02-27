@@ -16,7 +16,7 @@ class ModeleListeArticles {
         // Variable conn initialisé dans le fichier connect.inc.php
         global $conn;
         // $listeAccueil = null;
-        $res = $conn->prepare("SELECT * FROM Articles WHERE catArticle = 'Accueil'");
+        $res = $conn->prepare("SELECT * FROM Articles");
         $res->execute();
         foreach ($res as $articles) {
             $listeAccueil[] = new Articles($articles['idArticle'], $articles['catArticle'], $articles['titreArticle'], $articles['contenu']);

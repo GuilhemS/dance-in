@@ -18,7 +18,7 @@
 					<?php
 					$bdd = new PDO('mysql:host=localhost;dbname=dance-in;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-					$reponse = $bdd->query('SELECT * FROM Articles WHERE catArticle = "evenement";');
+					$reponse = $bdd->query('SELECT * FROM Articles WHERE catArticle = "Evenement";');
 
 					while ($donnees = $reponse->fetch()){
 						?>
