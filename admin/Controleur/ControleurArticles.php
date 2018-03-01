@@ -59,9 +59,10 @@ class ControleurArticles {
         if (isset($_POST['Valider'])) {
             include ('Modele/connect.inc.php');
             $pdostat = $conn->prepare("INSERT INTO `Articles`(`catArticle`, `titreArticle`, `dateArticle`, `contenu`) VALUES (?, ?, ?, ?);");
-            $pdostat->execute(array($_POST['categorie'], $_POST['titre'], date('d-m-Y'), $_POST['editor']));
+            $pdostat->execute(array($_POST['categorie'], $_POST['titre'], date('d-m-Y'), $_POST['editor'])); 
         } else {
             header('location:index.php?entite=Articles&action=U&msgErreur=Erreur lors de l\'ajout de l\'article ...');
+            exit;
         }
     }
 }

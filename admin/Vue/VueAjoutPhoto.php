@@ -20,38 +20,33 @@
 <body>
 <?php include('include/nav.php'); ?>
     <div class="contenu">
+        <h1> Veuillez selectioner la photo à ajouter depuis votre ordinateur : </h1>
+        <form method="POST" action="upload.php" enctype="multipart/form-data">
+            </br>
+             <!-- On limite le fichier à 100Ko -->
+             <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+             Photo : <input type="file" name="newPhoto">
+             <input type="submit" name="envoyer" value="Ajouter la photo">
+            </br>
+        </form>
+
+
         <?php
-        if (isset($_GET['msgErreur'])) {
-            echo "<BR/><h2>".$_GET['msgErreur']."</h2>";
-        }
-        if (isset($_SESSION['identifie'])) {
-            if ($vListePhoto->count() >= 1) {
-                ?>
-                Liste des photos :
-                <br/><br/>
-                <table border="2" align="center">
-                    <div class="liste">
-                        <tbody style="align:center">
-                        <tr><th>photo</th><th>description</th><th>supprimer</th></tr>
-                        </tbody>
-                        <?php
-                        foreach ($vListePhoto as $photo) {
-                            echo '<tr><td><img src="../images/slides/'.$photo->nom.'" alt="'.$photo->description.'" height="10%" width="20%"/></td>';
-                            echo '<td>'.$photo->description.'</td>';
-                            echo '<td align="center"><a href="index.php?entite=Galerie&action=D&id='.$photo->nom.'" onclick="return confirm(\"Etes vous sur de vouloir supprimer cet element?\")">
-                                                                <img src="include/corbeille.png" alt="corbeille.png" /></a></td>';
-                            echo '</tr>';
-                        }
-                        ?>
-                    </div>
-                </table>
-                <?php
-            } else {
-                echo 'Pas de pages ...';
-            }
+        if(isset($_FILES['newPhoto']))
+        {
+             $dossier = 'upload/';
+             $fichier = basename($_FILES['avatar']['name']);
+             if(move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+             {
+                  echo 'Upload effectué avec succès !';
+             }
+             else //Sinon (la fonction renvoie FALSE).
+             {
+                  echo 'Echec de l\'upload !';
+             }
         }
         ?>
-        <br/>
+        </br>
         <a href="index.php?entite=Galerie&action=R">Retour</a>
     </div>
 </body>

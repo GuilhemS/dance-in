@@ -20,7 +20,7 @@ class ControleurConnexion {
             } else {
                 // Cas ou l'identification est correct
                 $_SESSION['identifie'] = 'OK';
-                echo 'le cul';
+                echo 'le';
                 header('location:index.php?entite=Accueil');
             }
         } else {
