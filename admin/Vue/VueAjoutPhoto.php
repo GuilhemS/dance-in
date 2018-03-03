@@ -20,32 +20,20 @@
 <body>
 <?php include('include/nav.php'); ?>
     <div class="contenu">
+        <?php
+        if (isset($_GET['msgErreur'])) {
+            echo "<BR/><h2>".$_GET['msgErreur']."</h2>";
+        }?>
         <h1> Veuillez selectioner la photo à ajouter depuis votre ordinateur : </h1>
-        <form method="POST" action="upload.php" enctype="multipart/form-data">
+        <form method="POST" action="include/upload.php" enctype="multipart/form-data">
             </br>
-             <!-- On limite le fichier à 100Ko -->
-             <input type="hidden" name="MAX_FILE_SIZE" value="100000">
-             Photo : <input type="file" name="newPhoto">
-             <input type="submit" name="envoyer" value="Ajouter la photo">
+            <!-- On limite le fichier à 100Ko -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+            <p><label for="photo">Photo : </label><input type="file" name="newPhoto"></p>
+            <p><label for="description">Description : </label><input type="text" id="description" name="description" tabindex="2" /></p>
+            <input type="submit" name="envoyer" value="Ajouter la photo">
             </br>
         </form>
-
-
-        <?php
-        if(isset($_FILES['newPhoto']))
-        {
-             $dossier = 'upload/';
-             $fichier = basename($_FILES['avatar']['name']);
-             if(move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
-             {
-                  echo 'Upload effectué avec succès !';
-             }
-             else //Sinon (la fonction renvoie FALSE).
-             {
-                  echo 'Echec de l\'upload !';
-             }
-        }
-        ?>
         </br>
         <a href="index.php?entite=Galerie&action=R">Retour</a>
     </div>

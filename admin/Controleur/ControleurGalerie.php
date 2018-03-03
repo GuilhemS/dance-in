@@ -21,7 +21,7 @@ class ControleurGalerie {
     }
 
     public function supprimerPhoto($id) {
-
+        
     }
 
     public function ajouterPhoto() {
