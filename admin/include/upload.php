@@ -8,7 +8,7 @@
 
 $dossier = '../../images/slides/';
 $fichier = basename($_FILES['newPhoto']['name']);
-$taille_maxi = 100000;
+$taille_maxi = 1000000;
 $taille = filesize($_FILES['newPhoto']['tmp_name']);
 $extensions = array('.png', '.gif', '.jpg', '.jpeg');
 $extension = strrchr($_FILES['newPhoto']['name'], '.');

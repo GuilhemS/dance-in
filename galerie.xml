@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <galerie>
     <photo id="1">
-        <nom>imagedanse1.jpg</nom>
-        <description>Danse contemporaine</description>
+        <nom>chaussons.jpg</nom>
+        <description>Evénement photo artistique classique 2018</description>
     </photo>
     <photo id="2">
         <nom>imagedanse2.jpg</nom>
-        <description>Moche</description>
+        <description>Spectacle de contemporain 2017</description>
     </photo>
     <photo id="3">
-        <nom>imagedanse3.jpg</nom>
-        <description>thug life</description>
+        <nom>hiphop.jpg</nom>
+        <description>Performer de Hip-Hop professionel </description>
     </photo>
     <photo id="4">
-        <nom>imagedanse4.jpg</nom>
-        <description>Classique</description>
+        <nom>danse-moderne.jpg</nom>
+        <description>Spectacle 2016 de contemporain</description>
+    </photo>
+    <photo id="5">
+        <nom>contempo.jpg</nom>
+        <description>Duo phare de l'école au concour national</description>
     </photo>
 </galerie>

@@ -1,7 +1,14 @@
 <nav>
-    <a href="#" class="iconeMenu"></a>
+    <!- Menu Hamburger ->
+    <div class="hamb" onclick="showMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <!-________________->
+
     <img src="images/logo.png" alt="Logo Dance'in" id="logo"/>
-    <ul class="navbar">
+    <ul class="navbar" id="navbar">
         <li class="testActive">
             <a href="index.php">Dance'in</a>
         </li>
@@ -22,3 +29,15 @@
         </li>
     </ul>
 </nav>
+
+<script>
+function showMenu() {
+    if(document.getElementById("navbar").style.display == "none"){
+    document.getElementById("navbar").style.display = "block";
+    }
+    else {
+        document.getElementById("navbar").style.display = "none";
+    }
+}
+
+</script>

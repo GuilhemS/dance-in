@@ -27,8 +27,6 @@
         <h1> Veuillez selectioner la photo à ajouter depuis votre ordinateur : </h1>
         <form method="POST" action="include/upload.php" enctype="multipart/form-data">
             </br>
-            <!-- On limite le fichier à 100Ko -->
-            <input type="hidden" name="MAX_FILE_SIZE" value="100000">
             <p><label for="photo">Photo : </label><input type="file" name="newPhoto"></p>
             <p><label for="description">Description : </label><input type="text" id="description" name="description" tabindex="2" /></p>
             <input type="submit" name="envoyer" value="Ajouter la photo">

@@ -18,9 +18,9 @@
         <li>
             <a href="index.php?entite=Articles">Modification articles</a>
         </li>
-        <li>
-            <a href="index.php?entite=Galerie&action=R">Modification galerie</a>
+        <!-
+        <li
+            <a href="index.php?entite=Galerie&action=R"Modification galerie</a
         </li>
     </ul>
 </nav>
-
